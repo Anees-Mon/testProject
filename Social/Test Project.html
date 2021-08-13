@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="sectionLogin">
+        <div class="login-page-bg">
+            <form id="loginForm" class="login-form">
+                <label for="userName" class="text-primary">Username</label>
+                <input id="userName" type="text" class="form-control" />
+                <label for="password" class="text-primary">Password</label>
+                <input id="password" type="password" class="form-control" />
+                <button type="submit" class="btn btn-primary login-button">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="sectionHome">
+        <div class="home-page-bg">
+            <form id="createForm" class="post-create-form">
+                <label for="createTitle" class="post-create-label">Title</label>
+                <input id="createTitle" type="text" class="form-control" />
+                <label for="createImageLink" class="post-create-label">Image Link</label>
+                <input id="createImageLink" type="text" class="form-control" />
+                <label for="createDescription" class="post-create-label">Description</label>
+                <textarea id="createDescription" class="form-control mb-2"></textarea>
+                <p id="errorMsg" class="text-danger m-0 mb-3"></p>
+                <button id="postButton" type="submit" class="btn btn-primary btn-block">Post</button>
+            </form>
+            <div class="latest-posts-section">
+                <h1 class="homepage-sub-heading">Latest <span class="homepage-sub-heading-part">Posts</span></h1>
+                <hr class="homepage-sub-heading-rule" />
+                <ul id="postsContainer" class="posts-container"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="sectionDetailedView">
+        <div class="home-page-bg">
+            <div class="latest-posts-section">
+                <h1 class="homepage-sub-heading">Post <span class="homepage-sub-heading-part">Detail</span></h1>
+                <hr class="homepage-sub-heading-rule" />
+                <ul id="postDetailsContainer" class="posts-container"></ul>
+                <ul id="commentsSection" class="comments-section">
+                    <div class="comments-header">
+                        <h1 class="comments-header-text">Comments</h1>
+                    </div>
+                    <textarea id="commentInput" class="form-control" rows="2" cols="30" placeholder="Share your thoughts..."></textarea>
+                    <button id="commentPost" class="comment-button" onclick="createAppendComment()">Comment</button>
+                </ul>
+                <ul id="commentsContainer" class="comments-container"></ul>
+
+
+            </div>
+            <button type="button" class="btn btn-outline-secondary m-2" onclick="displayed('sectionHome')">Back</button>
+        </div>
+    </div>
+</body>
+
+</html>
